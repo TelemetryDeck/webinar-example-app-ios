@@ -39,6 +39,15 @@ struct Settings: View {
             } footer: {
                 Text(pizzaDescriptionText)
             }
+
+            Section("Privacy & Analytics") {
+                Text("We use Telemetrydeck for easy, anonymous analytics without infringing on your privacy.")
+                Button("TelemetryDeck Privacy Policy") {
+                    if let url = URL(string: "https://telemetrydeck.com/privacy/") {
+                        UIApplication.shared.open(url)
+                    }
+                }
+            }
         }
     }
 }
