@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import TelemetryClient
 
 struct BakingTimer: View {
     @State private var timeElapsed: Float = 0
@@ -83,6 +84,9 @@ struct BakingTimer: View {
         .onReceive(timer) { _ in
             guard timerIsRunning else { return }
             timeElapsed += 1
+        }
+        .onAppear {
+            TelemetryManager.send("view", with: ["viewName": "BakingTimer"])
         }
     }
 }

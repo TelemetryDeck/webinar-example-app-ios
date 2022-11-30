@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import TelemetryClient
 
 struct Settings: View {
     @AppStorage("DisplayUnit") private var displayUnit = "Metric"
@@ -48,6 +49,9 @@ struct Settings: View {
                     }
                 }
             }
+        }
+        .onAppear {
+            TelemetryManager.send("view", with: ["viewName": "Settings"])
         }
     }
 }

@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import TelemetryClient
 
 struct ContentView: View {
     var body: some View {
@@ -46,6 +47,9 @@ struct ContentView: View {
             }
             .frame(maxWidth: .infinity)
             .navigationTitle("Pizza Maker Pro")
+        }
+        .onAppear {
+            TelemetryManager.send("view", with: ["viewName": "ContentView"])
         }
     }
 }

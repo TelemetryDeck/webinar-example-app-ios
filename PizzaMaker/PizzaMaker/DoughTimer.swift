@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import TelemetryClient
 
 struct DoughTimer: View {
     @State private var timeRemaining: Float = 28800
@@ -84,6 +85,9 @@ struct DoughTimer: View {
             if timeRemaining > 0 {
                 timeRemaining -= 1
             }
+        }
+        .onAppear {
+            TelemetryManager.send("view", with: ["viewName": "DoughTimer"])
         }
     }
 }
