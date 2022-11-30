@@ -21,6 +21,8 @@ struct DoughTimer: View {
     }
 
     func toggleTimer() {
+        TelemetryManager.send("DoughTimerToggled", with: ["newState": "\(!timerIsRunning)"])
+        
         withAnimation {
             timerIsRunning.toggle()
         }
