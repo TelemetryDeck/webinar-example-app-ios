@@ -14,6 +14,7 @@
 		2BDB8BC5293759320068F04A /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BDB8BC4293759320068F04A /* Settings.swift */; };
 		2BDB8BC72937593E0068F04A /* DoughTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BDB8BC62937593E0068F04A /* DoughTimer.swift */; };
 		2BDB8BC9293759450068F04A /* BakingTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BDB8BC8293759450068F04A /* BakingTimer.swift */; };
+		2BDB8BCC293765ED0068F04A /* TelemetryClient in Frameworks */ = {isa = PBXBuildFile; productRef = 2BDB8BCB293765ED0068F04A /* TelemetryClient */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2BDB8BCC293765ED0068F04A /* TelemetryClient in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -92,6 +94,9 @@
 			dependencies = (
 			);
 			name = PizzaMaker;
+			packageProductDependencies = (
+				2BDB8BCB293765ED0068F04A /* TelemetryClient */,
+			);
 			productName = PizzaMaker;
 			productReference = 2BDB8BB32937586B0068F04A /* PizzaMaker.app */;
 			productType = "com.apple.product-type.application";
@@ -120,6 +125,9 @@
 				Base,
 			);
 			mainGroup = 2BDB8BAA2937586B0068F04A;
+			packageReferences = (
+				2BDB8BCA293765ED0068F04A /* XCRemoteSwiftPackageReference "SwiftClient" */,
+			);
 			productRefGroup = 2BDB8BB42937586B0068F04A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -349,6 +357,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		2BDB8BCA293765ED0068F04A /* XCRemoteSwiftPackageReference "SwiftClient" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/TelemetryDeck/SwiftClient.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		2BDB8BCB293765ED0068F04A /* TelemetryClient */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2BDB8BCA293765ED0068F04A /* XCRemoteSwiftPackageReference "SwiftClient" */;
+			productName = TelemetryClient;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 2BDB8BAB2937586B0068F04A /* Project object */;
 }
