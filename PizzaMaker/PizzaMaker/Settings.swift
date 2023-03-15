@@ -9,25 +9,25 @@ import SwiftUI
 
 struct Settings: View {
     @AppStorage("DisplayUnit") private var displayUnit = "Metric"
+    @AppStorage("isPurchased") private var isPurchased = false
+    @AppStorage("showOnboarding") private var showOnboarding = true
+
     var availableUnits = ["Metric", "Imperial", "Radians"]
-    
+
     var pizzaDescriptionText: String {
-        get {
-            switch displayUnit {
-            case "Metric":
-                return "Your pizza is 32cm in diameter and weighs 300g"
-            case "Imperial":
-                return "Your pizza is 12.6in in diameter and weighs 10oz"
-            default:
-                return "π * z * z * a"
-            }
+        switch displayUnit {
+        case "Metric":
+            return "Your pizza is 32cm in diameter and weighs 300g"
+        case "Imperial":
+            return "Your pizza is 12.6in in diameter and weighs 10oz"
+        default:
+            return "π * z * z * a"
         }
     }
 
     var body: some View {
         Form {
             Section {
-                
                 Picker("What is your favorite color?", selection: $displayUnit) {
                     ForEach(availableUnits, id: \.self) {
                         Text($0)
@@ -38,6 +38,32 @@ struct Settings: View {
                 Text("Units")
             } footer: {
                 Text(pizzaDescriptionText)
+            }
+            
+            Section {
+                Toggle("Show onboarding", isOn: $showOnboarding)
+            } header: {
+                Text("Onboarding")
+            } footer: {
+                Text("Onboarding")
+            }
+
+            Section {
+                if isPurchased {
+                    Button("Cancel Subscription", action: {
+                        isPurchased = false
+                    })
+                } else {
+                    NavigationLink {
+                        PurchaseView()
+                    } label: {
+                        Text("Get Pro")
+                    }
+                }
+            } header: {
+                Text("Subscription")
+            } footer: {
+                Text("Support your local pizza friend")
             }
         }
     }
