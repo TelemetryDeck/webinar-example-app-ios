@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2B62446B29C216D300763C56 /* PurchaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B62446A29C216D300763C56 /* PurchaseView.swift */; };
+		2B62446D29C21BA400763C56 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B62446C29C21BA400763C56 /* OnboardingView.swift */; };
 		2BDB8BB72937586B0068F04A /* PizzaMakerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BDB8BB62937586B0068F04A /* PizzaMakerApp.swift */; };
 		2BDB8BB92937586B0068F04A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BDB8BB82937586B0068F04A /* ContentView.swift */; };
 		2BDB8BBB2937586C0068F04A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2BDB8BBA2937586C0068F04A /* Assets.xcassets */; };
@@ -18,6 +20,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2B62446A29C216D300763C56 /* PurchaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseView.swift; sourceTree = "<group>"; };
+		2B62446C29C21BA400763C56 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		2BDB8BB32937586B0068F04A /* PizzaMaker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PizzaMaker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2BDB8BB62937586B0068F04A /* PizzaMakerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PizzaMakerApp.swift; sourceTree = "<group>"; };
 		2BDB8BB82937586B0068F04A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -64,8 +68,10 @@
 				2BDB8BC4293759320068F04A /* Settings.swift */,
 				2BDB8BC62937593E0068F04A /* DoughTimer.swift */,
 				2BDB8BC8293759450068F04A /* BakingTimer.swift */,
+				2B62446A29C216D300763C56 /* PurchaseView.swift */,
 				2BDB8BBA2937586C0068F04A /* Assets.xcassets */,
 				2BDB8BBC2937586C0068F04A /* Preview Content */,
+				2B62446C29C21BA400763C56 /* OnboardingView.swift */,
 			);
 			path = PizzaMaker;
 			sourceTree = "<group>";
@@ -157,8 +163,10 @@
 				2BDB8BC5293759320068F04A /* Settings.swift in Sources */,
 				2BDB8BB92937586B0068F04A /* ContentView.swift in Sources */,
 				2BDB8BC9293759450068F04A /* BakingTimer.swift in Sources */,
+				2B62446B29C216D300763C56 /* PurchaseView.swift in Sources */,
 				2BDB8BB72937586B0068F04A /* PizzaMakerApp.swift in Sources */,
 				2BDB8BC72937593E0068F04A /* DoughTimer.swift in Sources */,
+				2B62446D29C21BA400763C56 /* OnboardingView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
