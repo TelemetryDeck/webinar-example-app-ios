@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import TelemetryClient
 
 struct OnboardingView: View {
     @State private var currentPage = 0
@@ -22,6 +23,7 @@ struct OnboardingView: View {
             .indexViewStyle(PageIndexViewStyle(backgroundDisplayMode: .always))
             .onChange(of: currentPage) { newPage in
                 print("Page changed to \(newPage)!")
+                TelemetryManager.send("onboardingPageDisplayed", with: ["page": "\(newPage)"])
             }
 
             if currentPage == 2 {

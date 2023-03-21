@@ -77,8 +77,6 @@ struct Settings: View {
         }
         .onAppear {
             TelemetryManager.send("view", with: ["viewName": "Settings"])
-            
-           
         }
     }
 }

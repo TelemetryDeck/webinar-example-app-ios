@@ -68,10 +68,10 @@
 				2BDB8BC4293759320068F04A /* Settings.swift */,
 				2BDB8BC62937593E0068F04A /* DoughTimer.swift */,
 				2BDB8BC8293759450068F04A /* BakingTimer.swift */,
+				2B62446C29C21BA400763C56 /* OnboardingView.swift */,
 				2B62446A29C216D300763C56 /* PurchaseView.swift */,
 				2BDB8BBA2937586C0068F04A /* Assets.xcassets */,
 				2BDB8BBC2937586C0068F04A /* Preview Content */,
-				2B62446C29C21BA400763C56 /* OnboardingView.swift */,
 			);
 			path = PizzaMaker;
 			sourceTree = "<group>";

@@ -19,7 +19,7 @@ struct PizzaMakerApp: App {
     }
     
     init() {
-        let configuration = TelemetryManagerConfiguration(appID: "02C49F2E-F3FF-4715-BBB6-C381F9541905")
+        let configuration = TelemetryManagerConfiguration(appID: "89F5DC65-0762-43ED-ABEF-984FE6D1574E")
         // optional: modify the configuration here
         TelemetryManager.initialize(with: configuration)
         

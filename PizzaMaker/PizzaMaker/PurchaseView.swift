@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import TelemetryClient
 
 struct PurchaseView: View {
     @AppStorage("isPurchased") private var isPurchased = false
@@ -51,6 +52,9 @@ struct PurchaseView: View {
                 Spacer()
             }
         }
+        .onAppear {
+            TelemetryManager.send("view", with: ["viewName": "PurchaseView"])
+        }
     }
 }
 
@@ -63,6 +67,7 @@ struct PricingOptionView: View {
     var body: some View {
         Button.init {
             isPurchased = true
+            TelemetryManager.send("paymentSucceeded")
         } label: {
             VStack {
                 Text(price)
